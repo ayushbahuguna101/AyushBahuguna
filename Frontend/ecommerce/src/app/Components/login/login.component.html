@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<br>
+
+<div class="sidenav">
+    <div class="login-main-text">
+      <h2>
+        Application<br />
+        Login Page
+      </h2>
+      <p>Login or register from here to access.</p>
+    </div>
+  </div>
+  <div class="main">
+    <div class="col-md-6 col-sm-12">
+      <div class="login-form">
+
+
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+          <div class="form-group">
+            <label>User Name</label>
+            <input  class="form-control" placeholder="Username" required name="username" ngModel #username="ngModel" />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input  class="form-control" placeholder="Password" type="password" required name="password" ngModel #password="ngModel" />
+          </div>
+          <button [disabled]="loginForm.invalid" type="submit" class="btn btn-black">Login</button>
+          <button type="button" class="btn btn-secondary" (click)="signupClick()">Signup</button>
+        </form>
+
+
+      </div>
+    </div>
+  </div>

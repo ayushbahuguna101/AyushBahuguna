@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- main content -->
+<div class="container bootdey">
+    
+    <div class="col-md-12">
+        
+        <div class="row product-list">
+            <div class="col-md-3" *ngFor="let product of productsList">
+                <section class="panel">
+                    <div class="pro-img-box">
+                        <img src="{{product?.image}}" alt="" />
+                        <button (click)="addToCart(product)" class="adtocart">
+                            <i class="fa fa-shopping-cart"></i>
+                        </button>
+                    </div>
+
+                    <div class="panel-body text-center">
+                        <h4>
+                            <h3  class="pro-title">{{product?.productsName}}</h3>
+                        </h4>
+                        <p class="price">₹{{product?.price}}</p>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </div>
+</div>

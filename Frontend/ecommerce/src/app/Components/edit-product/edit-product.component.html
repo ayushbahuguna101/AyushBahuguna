@@ -1,0 +1,45 @@
+<br /><br /><br /><br /><br />
+<app-navbar></app-navbar>
+<div class="d-flex justify-content-center">
+  <div style=" background-color: #00bfff; height: 630px; width: 400px; border-radius: 30px; text-align: center; width: 80%;" class="col-md-offset-4">
+
+    <h1 style="text-align: center; padding-top: 30px; color: #ffffff">Update Product</h1>
+    <br />
+
+    <form  #editForm="ngForm" >
+      <div class="col-sm-12" style="padding-top: 10px">
+        <input type="text" class="form-control" id="productsName" ngModel="{{editProduct?.productsName}}" name="productsName" placeholder="Product Name" style="border-radius: 15px" required/>
+      </div>
+      <br />
+      
+      <div class="col-sm-12" style="padding-top: 10px">
+        <input type="text" class="form-control" id="category" ngModel="{{editProduct?.category}}" name="category" placeholder="Product Category" style="border-radius: 15px" required/>
+      </div>
+      <br />
+      
+      <div class="col-sm-12" style="padding-top: 10px">
+        <input type="text" class="form-control" id="image" ngModel="{{editProduct?.image}}" name="image" placeholder="Product Image URL" style="border-radius: 15px" required/>
+      </div>
+      <br />
+  
+      <div class="col-sm-12" style="padding-top: 10px">
+        <input type="number" class="form-control" id="price" ngModel="{{editProduct?.price}}" name="price" placeholder="Product Price" style="border-radius: 15px" required/>
+      </div>
+      <br />
+
+      <div class="col-sm-12" style="padding-top: 10px">
+        <input type="text" class="form-control" id="description" ngModel="{{editProduct?.description}}" name="description" placeholder="Product Description" style="border-radius: 15px" required/>
+      </div>
+      <br />
+  
+      <button (click)="updateProduct(editForm.value)" class="col-md-4 col-md-offset-4 btn" style=" background-color: #ffffff; color: #626a69; font-size: 20px; margin-top: 10px; " type="submit" >
+        Update
+      </button>
+    </form>
+
+  </div>
+</div>
+<br />
+<br />
+<br />
+<br /><br />

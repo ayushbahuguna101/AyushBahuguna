@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </span>
+
+    <ul class="main-nav" id="js-menu">
+        
+        <li>
+            <a href="home" class="nav-links">Home</a>
+        </li>
+
+        <li>
+            <a *ngIf="!isLoggedIn" href="authenticate/login" class="nav-links">Login</a>
+        </li>
+    
+        <li>
+            <a *ngIf="!isLoggedIn" href="authenticate/signup" class="nav-links">Signup</a>
+        </li>
+        <li>
+            <a *ngIf="isLoggedIn" href="my-cart" class="nav-links">Cart</a>
+        </li>
+        <li>
+            <a *ngIf="isLoggedIn" href="my-orders" class="nav-links">Orders</a>
+        </li>
+        <li>
+            <a *ngIf="isAdmin" href="admin-dashboard" class="nav-links">Admin Dashboard</a>
+        </li>
+        <li>
+            <a *ngIf="isLoggedIn" class="nav-links" (click)="logout()" >Logout</a>
+        </li>
+     
+    </ul>
+</nav>

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<br>
+<br>
+<br>
+<br>
+<div class="main-container">
+    <button mat-raised-button color="primary" (click)="onBackClick()"><span class="material-icons about-icons">chevron_left</span>Back to Cart</button>
+    <div class="d-flex justify-content-center">
+        <div style="
+            background-color: #a1b5f5;
+            height: 500px;
+            width: 400px;
+            border-radius: 30px;
+            text-align: center;
+            width: 80%;" 
+            class="col-md-offset-4">
+            <h1 style="text-align: center; padding-top: 30px; color: #ffffff">Delivery Details</h1>
+            
+            <br />
+
+            <form #addAddress="ngForm" (ngSubmit)="onPrceedToPay(addAddress)">
+                <div class="col-sm-12" style="padding-top: 10px">
+                    <input type="text" class="form-control" style="border-radius: 15px;" ngModel name="fullName" class="form-control" id="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="col-sm-12" style="padding-top: 10px">
+                    <input type="tel" class="form-control" style="border-radius: 15px;" ngModel name="phone" class="form-control" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="col-sm-12" style="padding-top: 10px">
+                    <input type="text" class="form-control" style="border-radius: 15px;" ngModel name="address" class="form-control" id="address" placeholder="Address" required>
+                </div>
+                <div class="col-sm-12" style="padding-top: 10px">
+                    <input type="number" class="form-control" style="border-radius: 15px;" ngModel name="pin" class="form-control" id="pin" placeholder="PIN" required>
+                </div>    
+                <button [disabled]="addAddress.invalid " type="submit"  class="col-md-4 col-md-offset-4 btn" style="background-color: #ffffff; color: #626a69; font-size: 20px; margin-top: 10px;"  >Proceed to Pay</button>
+            </form>
+        </div>
+    </div>
+
+</div>
